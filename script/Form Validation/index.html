@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Registration Form</h1>
+
+        <div>
+            <form id="submit">
+                <div>
+                    <label for="name">Fullname</label><br>
+                    <input type="text" id="name">
+                    <p id="nameError" style="color:red;"></p>
+                </div>
+                <div>
+                    <label for="email">Email</label><br>
+                    <input type="email">
+                </div>
+                <div>
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password">
+                    <p id="passwordError" style="color: red;"></p>
+                </div>
+                <div>
+                    <label for="Confrimpassword">Confirm Password</label><br>
+                    <input type="password" id="confirmpass">
+                    <p id="confirmError"></p>
+                </div>
+                <br>
+                <div>
+                    <input type="submit">
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById('submit').addEventListener('submit', function (event) {
+            event.preventDefault()
+
+            let username = document.getElementById('name').value
+
+            let isValid = true
+
+            if (username.length < 3 || username.length > 25) {
+                document.getElementById('nameError').innerHTML = 'This is wrong'
+                isValid = false
+            } else {
+                document.getElementById('nameError').innerHTML = ' '
+                isValid = true
+            }
+
+            let password = document.getElementById('password').value
+
+            let passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm
+
+            if (passwordPattern.test(password) === false) {
+                document.getElementById('passwordError').innerHTML = 'not Match'
+                isValid = false
+            }
+            else {
+                document.getElementById('passwordError').innerHTML = ' '
+                isValid = true
+            }
+
+            let confirmpassword = document.getElementById("confirmpass").value
+            if(confirmpassword !== password)
+            {
+                 document.getElementById('confirmError').innerHTML = 'not Match'
+                 document.getElementById('confirmError').style.color = "red"
+                isValid = false           
+            }
+            else
+            {
+                document.getElementById('confirmError').innerHTML = ' '
+                isValid = true
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>

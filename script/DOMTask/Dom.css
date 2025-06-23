@@ -1,0 +1,33 @@
+.main{
+    margin:0 auto;
+    width: 30%;
+    border: 1px solid black;
+    height: 100%;
+    margin-top: 10px;
+}
+h2{
+    
+    text-align: center;
+}
+
+label {
+    
+    margin-left: 20px;
+}
+input
+{
+    
+    margin-left: 20px;
+    width: 85%;
+}
+button{
+    background-color: greenyellow;
+    margin: 20px;
+    padding: 5px;
+    width: 85%;
+}
+p{
+    margin-left: 20px;
+    color: red;
+    margin-top: 3px;
+}
