@@ -73,3 +73,5 @@ return(this.firstName + " " + this.lastName).toUpperCase();
  document.getElementById("test4").innerHTML = "My full name is" + " " + lower.case();
 
 
+
+
