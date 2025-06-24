@@ -1,0 +1,36 @@
+.main{
+    margin: 0 auto;
+    border: 2px solid violet;
+    width: 50%;
+
+}
+label{
+    margin: 10px;
+}
+h1{
+    margin-left: 10px;
+}
+button{
+    margin: 10px;
+  background-color: green;
+    padding: 10px;
+    width: 50%;
+    color: white;
+    
+}
+p{
+    color: red;
+
+}
+
+.error::after{
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 25px solid #dc3545 ;
+    position: absolute;
+    left: -32px;
+    content: '';
+    transform: rotate(90deg);
+}
